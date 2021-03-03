@@ -34,10 +34,15 @@ const Sidebar = props => {
   return (
     <Flex w={{ md: '22.5rem' }} h='100vh' bgColor='zd.800' direction='column'>
       <Flex h='100%' direction='column' overflowY='auto' pos='relative'>
-        <Flex h={28} pl={8} borderBottom='1px' borderBottomColor='zd-border'>
+        <Flex
+          h={28}
+          pl={8}
+          borderBottom='1px'
+          borderBottomColor='zd-border.100'
+        >
           <Image src={Logo} w={{ md: '10rem' }} alt='Zeedas logo' />
         </Flex>
-        <Flex as='nav' borderBottom='1px' borderBottomColor='zd-border'>
+        <Flex as='nav' borderBottom='1px' borderBottomColor='zd-border.100'>
           <Flex as='ul' direction='column' w='100%' p={10}>
             {menus.map(i => (
               <Link
@@ -75,7 +80,7 @@ const Sidebar = props => {
           px={10}
           direction='column'
           borderBottom='1px'
-          borderBottomColor='zd-border'
+          borderBottomColor='zd-border.100'
         >
           <Flex
             color='white'

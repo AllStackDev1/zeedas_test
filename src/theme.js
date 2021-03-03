@@ -12,8 +12,7 @@ export const theme = extendTheme({
     global: () => ({
       body: {
         fontSize: 'md',
-        fontFamily: '"NunitoSans", sans-serif',
-        lineHeight: 'tall'
+        fontFamily: '"NunitoSans", sans-serif'
       }
     })
   },
@@ -27,11 +26,15 @@ export const theme = extendTheme({
     zd: {
       body: '#F3F3F3',
       800: '#052231',
+      400: 'rgba(45, 45, 45, 0.5)',
       100: '#FBFBFB'
     },
     'zd-blue': {
       200: '#23B3E8'
     },
-    'zd-border': 'rgba(249, 249, 249, 0.1)'
+    'zd-border': {
+      100: 'rgba(249, 249, 249, 0.1)',
+      200: 'rgba(45, 45, 45, 0.1)'
+    }
   }
 })
