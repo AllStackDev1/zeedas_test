@@ -22,5 +22,16 @@ export const theme = extendTheme({
     heading: '"FuturaBold" ,sans-serif',
     display: '"NunitoSansBold" ,sans-serif',
     light: '"WorkSans" ,sans-serif'
+  },
+  colors: {
+    zd: {
+      body: '#F3F3F3',
+      800: '#052231',
+      100: '#FBFBFB'
+    },
+    'zd-blue': {
+      200: '#23B3E8'
+    },
+    'zd-border': 'rgba(249, 249, 249, 0.1)'
   }
 })
