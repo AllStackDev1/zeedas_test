@@ -9,9 +9,17 @@ const Wrapper = ({ children, ...rest }) => {
   return (
     <Flex w='100%'>
       <Sidebar {...rest} />
-      <Flex direction='column' w='100%' bgColor='zd.body'>
+      <Flex w='100%' direction='column' bgColor='zd.body' pos='relative'>
         <Topbar {...rest} />
-        <Box as='main' w='100%'>
+        <Box
+          as='main'
+          w='100%'
+          pt={28}
+          h='100vh'
+          zIndex={0}
+          pos='relative'
+          overflowY='auto'
+        >
           {children}
         </Box>
       </Flex>
