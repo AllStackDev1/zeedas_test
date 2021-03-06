@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react'
 import {
   Flex,
@@ -6,7 +5,6 @@ import {
   Text,
   Icon,
   Input,
-  Image,
   Avatar,
   InputGroup,
   InputLeftElement
@@ -16,7 +14,7 @@ import { FiBell, FiShield, FiChevronDown, FiChevronUp } from 'react-icons/fi'
 
 import useApp from 'context/app'
 
-import { Hamburger, Award } from 'assets/images'
+import { Hamburger, Award } from 'assets/icons'
 import DrowdownMenu from 'components/DropdownMenu'
 
 const Topbar = props => {
@@ -30,13 +28,15 @@ const Topbar = props => {
       py={10}
       pl={10}
       pr={20}
+      zIndex={40}
+      pos='absolute'
       bgColor='zd.100'
       alignItems='center'
       justifyContent='space-between'
     >
       <Flex w='50%' alignItems='center'>
         <Box cursor='pointer'>
-          <Image m='auto' src={Hamburger} />
+          <Icon m='auto' as={Hamburger} w='28px' h='20px' />
         </Box>
         <Text
           ml={20}
@@ -114,7 +114,7 @@ const Topbar = props => {
           <Text ml={2}>OWNER</Text>
         </Flex>
         <Box mr={8}>
-          <Image src={Award} mx='auto' />
+          <Icon m='auto' as={Award} w='25px' h='31px' />
         </Box>
         <Flex
           shrink='0'

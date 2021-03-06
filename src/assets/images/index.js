@@ -1,6 +1,4 @@
 export { default as Logo } from './logo.svg'
 export { default as Card } from './card.svg'
-export { default as Award } from './award.svg'
-export { default as Hamburger } from './menu.svg'
 export { default as BackgroundLogo } from './background-logo.svg'
 export { default as AIllustration } from './girl_announcer.svg'
