@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {
   Flex,
   Box,
@@ -12,17 +11,13 @@ import {
 } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom'
 
-import { FiHome, FiGitPullRequest, FiUsers, FiPlus } from 'react-icons/fi'
-import { IoWalletOutline } from 'react-icons/io5'
+import useApp from 'context/app'
+
+import { FiPlus } from 'react-icons/fi'
 import { Logo, AIllustration, BackgroundLogo } from 'assets/images'
 
 const Sidebar = props => {
-  const menus = [
-    { name: 'Overview', link: '/', icon: FiHome },
-    { name: 'Projects', link: '/', icon: FiGitPullRequest },
-    { name: 'Tasks', link: '/', icon: FiUsers },
-    { name: 'Wallet', link: '/', icon: IoWalletOutline, active: true }
-  ]
+  const { menus } = useApp()
 
   const myTeam = [
     { name: 'Prince Natterbase', color: '#23B3E8' },
@@ -50,7 +45,6 @@ const Sidebar = props => {
                 exact
                 d='flex'
                 key={i.name}
-                color='white'
                 to={i.link}
                 as={NavLink}
                 fontSize='md'
@@ -62,12 +56,17 @@ const Sidebar = props => {
               >
                 <Box
                   p={3}
+                  color='white'
                   bgColor={i.active ? 'zd-blue.200' : ''}
                   borderRadius='10px'
                 >
                   <Icon as={i.icon} boxSize={6} />
                 </Box>
-                <Text ml={3} color={i.active ? 'zd-blue.200' : ''}>
+                <Text
+                  ml={3}
+                  color={i.active ? 'zd-blue.200' : 'white'}
+                  _hover={{ color: 'zd-blue.200' }}
+                >
                   {i.name}
                 </Text>
               </Link>
@@ -168,10 +167,6 @@ const Sidebar = props => {
       </Flex>
     </Flex>
   )
-}
-
-Sidebar.propTypes = {
-  children: PropTypes.node.isRequired
 }
 
 export default Sidebar

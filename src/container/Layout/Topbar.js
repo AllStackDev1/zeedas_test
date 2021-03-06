@@ -1,27 +1,34 @@
+/* eslint-disable no-console */
 import React from 'react'
-import PropTypes from 'prop-types'
 import {
   Flex,
   Box,
-  Image,
   Text,
   Icon,
+  Input,
+  Image,
+  Avatar,
   InputGroup,
-  InputLeftElement,
-  Input
+  InputLeftElement
 } from '@chakra-ui/react'
+import { RiSearch2Line } from 'react-icons/ri'
+import { FiBell, FiShield, FiChevronDown, FiChevronUp } from 'react-icons/fi'
+
+import useApp from 'context/app'
 
 import { Hamburger, Award } from 'assets/images'
-import { RiSearch2Line } from 'react-icons/ri'
-import { FiBell, FiShield } from 'react-icons/fi'
+import DrowdownMenu from 'components/DropdownMenu'
 
 const Topbar = props => {
+  const { menus, isTopbarDropdownOpen, toggleTopbarDropdown } = useApp()
+  const noticeCount = 0
+
   return (
     <Flex
       w='100%'
       h={28}
       py={10}
-      px={12}
+      px={20}
       bgColor='zd.100'
       alignItems='center'
       justifyContent='space-between'
@@ -77,16 +84,18 @@ const Topbar = props => {
         <Box d='inline-block' pos='relative'>
           <Text
             as='span'
-            py='5px' // '1px' when there is value
-            px='5px' // '6px'  when there is value
-            top='-3px' // '-10px'  when there is value
-            right='2px' // '-4px'  when there is value
+            py={!noticeCount ? '5px' : '1px'}
+            px={!noticeCount ? '5px' : '6px'}
+            top={!noticeCount ? '-3px' : '-10px'}
+            right={!noticeCount ? '2px' : '-4px'}
             fontSize='xs'
             color='white'
             pos='absolute'
             bgColor='red.500'
             borderRadius='50%'
-          ></Text>
+          >
+            {!!noticeCount && noticeCount}
+          </Text>
           <Icon as={FiBell} boxSize={6} />
         </Box>
         <Flex
@@ -103,16 +112,59 @@ const Topbar = props => {
           <Icon as={FiShield} boxSize={4} />
           <Text ml={2}>OWNER</Text>
         </Flex>
-        <Box>
+        <Box mr={8}>
           <Image src={Award} mx='auto' />
         </Box>
+        <Flex
+          shrink='0'
+          as='button'
+          type='button'
+          alignItems='center'
+          aria-haspopup='true'
+          aria-expanded='true'
+          _focus={{ outline: 'none' }}
+          direction={{ md: 'column', lg: 'row' }}
+          onClick={toggleTopbarDropdown}
+        >
+          <Flex alignItems='center'>
+            <Avatar
+              size='md'
+              title='profile avatar'
+              src={require('assets/images/user.png').default}
+            />
+          </Flex>
+          <Flex ml={{ lg: 3 }}>
+            <Box textAlign='left'>
+              <Text
+                fontSize='sm'
+                lineHeight='3'
+                fontWeight='medium'
+                textColor='gray.700'
+              >
+                Chioma Davis
+              </Text>
+              <Text
+                fontSize='x-small'
+                lineHeight='3'
+                fontWeight='medium'
+                textColor='gray.500'
+              >
+                Chioma@natterbase
+              </Text>
+            </Box>
+            <Box ml={2}>
+              {isTopbarDropdownOpen ? (
+                <Icon as={FiChevronUp} />
+              ) : (
+                <Icon as={FiChevronDown} />
+              )}
+            </Box>
+          </Flex>
+        </Flex>
+        <DrowdownMenu {...{ menus, isOpen: isTopbarDropdownOpen }} />
       </Flex>
     </Flex>
   )
-}
-
-Topbar.propTypes = {
-  children: PropTypes.node.isRequired
 }
 
 export default Topbar
