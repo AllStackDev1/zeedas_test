@@ -28,7 +28,8 @@ const Topbar = props => {
       w='100%'
       h={28}
       py={10}
-      px={20}
+      pl={10}
+      pr={20}
       bgColor='zd.100'
       alignItems='center'
       justifyContent='space-between'

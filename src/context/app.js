@@ -1,4 +1,4 @@
-import React, { useState, useContext, createContext } from 'react'
+import React, { useContext, createContext } from 'react'
 import PropTypes from 'prop-types'
 import { useDisclosure } from '@chakra-ui/react'
 
@@ -8,7 +8,7 @@ import { IoWalletOutline } from 'react-icons/io5'
 const AppContext = createContext()
 
 export const AppContextProvider = ({ children }) => {
-  const [isSidebarOpen, setSidebarState] = useState(false)
+  const { isOpen: isSidebarOpen, onToggle: toggleSidebar } = useDisclosure()
   const {
     isOpen: isTopbarDropdownOpen,
     onToggle: toggleTopbarDropdown
@@ -20,8 +20,6 @@ export const AppContextProvider = ({ children }) => {
     { name: 'Tasks', link: '/', icon: FiUsers },
     { name: 'Wallet', link: '/', icon: IoWalletOutline, active: true }
   ]
-
-  const toggleSidebar = () => setSidebarState(!isSidebarOpen)
 
   return (
     <AppContext.Provider
