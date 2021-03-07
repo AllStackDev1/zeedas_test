@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Flex, Image } from '@chakra-ui/react'
 
