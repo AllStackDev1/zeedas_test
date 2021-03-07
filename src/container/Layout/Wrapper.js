@@ -8,7 +8,7 @@ import Sidebar from './Sidebar'
 
 const Wrapper = ({ children }) => {
   return (
-    <Flex w='100%' h='100vh' overflowY='hidden'>
+    <Flex w='100%' h='100vh' overflow='hidden'>
       <Sidebar />
       <Flex w='100%' direction='column' bgColor='zd.body' pos='relative'>
         <Topbar />
