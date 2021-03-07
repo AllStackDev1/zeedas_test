@@ -153,7 +153,7 @@ const Topbar = () => {
                 fontSize='x-small'
                 lineHeight='3'
                 fontWeight='medium'
-                textColor='gray.500'
+                textColor='zd-blue'
               >
                 Chioma@natterbase
               </Text>
