@@ -66,7 +66,7 @@ const Balance = () => {
           justifyContent='space-between'
           bgColor='zd-blue.500'
           leftIcon={<WalletIcon w='22px' h='20px' />}
-          rightIcon={<FiChevronRight />}
+          rightIcon={<FiChevronRight color='rgba(249,249,249,0.4)' />}
         >
           Fund Wallet
         </Button>
@@ -81,7 +81,7 @@ const Balance = () => {
           }}
           justifyContent='space-between'
           leftIcon={<CreditCardIcon w='22px' h='20px' />}
-          rightIcon={<FiChevronRight />}
+          rightIcon={<FiChevronRight color='rgba(249,249,249,0.4)' />}
         >
           Add Card
         </Button>

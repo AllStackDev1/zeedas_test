@@ -29,6 +29,7 @@ export const theme = extendTheme({
       400: 'rgba(45,45,45,0.5)'
     },
     'zd-blue': {
+      50: 'rgba(35,179,232,0.05)',
       100: 'rgba(35,179,232,0.2)',
       500: '#23B3E8'
     },
