@@ -113,7 +113,7 @@ const Topbar = () => {
           fontWeight='800'
           alignItems='center'
           borderRadius='5px'
-          bgColor='zd-blue'
+          bgColor='zd-blue.500'
         >
           <Icon as={FiShield} boxSize={4} />
           <Text ml={2}>OWNER</Text>
@@ -153,7 +153,7 @@ const Topbar = () => {
                 fontSize='x-small'
                 lineHeight='3'
                 fontWeight='medium'
-                textColor='zd-blue'
+                textColor='zd-blue.500'
               >
                 Chioma@natterbase
               </Text>

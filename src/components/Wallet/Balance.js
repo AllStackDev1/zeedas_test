@@ -46,7 +46,7 @@ const Balance = () => {
             />
             <Box>
               <Text as='span'>Last funded</Text>
-              <Text as='span' ml={2} color='zd-blue'>
+              <Text as='span' ml={2} color='zd-blue.500'>
                 2 days ago
               </Text>
             </Box>
@@ -61,10 +61,10 @@ const Balance = () => {
           color='white'
           fontSize='sm'
           _hover={{
-            bgColor: 'zd-blue'
+            bgColor: 'zd-blue.500'
           }}
           justifyContent='space-between'
-          bgColor='zd-blue'
+          bgColor='zd-blue.500'
           leftIcon={<WalletIcon w='22px' h='20px' />}
           rightIcon={<FiChevronRight />}
         >

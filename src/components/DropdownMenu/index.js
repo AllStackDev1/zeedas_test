@@ -52,7 +52,7 @@ const DrowdownMenu = ({ menus, isOpen }) => {
                   color={color + '.700'}
                   _hover={{
                     color: 'white',
-                    bgColor: 'zd-blue'
+                    bgColor: 'zd-blue.500'
                   }}
                   _focus={{
                     outline: 'none',

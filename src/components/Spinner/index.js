@@ -7,7 +7,7 @@ const LoadingSpinner = () => {
       thickness='4px'
       speed='0.65s'
       emptyColor='gray.200'
-      color='zd-blue'
+      color='zd-blue.500'
     />
   )
 }

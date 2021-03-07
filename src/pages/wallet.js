@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 import useSetAppProps from 'hooks/useSetAppProps'
-import { Balance, TranscationCards } from 'components/Wallet'
+import { Balance, TranscationCards, RecentActivities } from 'components/Wallet'
 
 const Wallet = props => {
   useSetAppProps(props)
@@ -10,6 +10,7 @@ const Wallet = props => {
       <Box w='63%'>
         <Balance />
         <TranscationCards />
+        <RecentActivities />
       </Box>
       <Box w='35%'></Box>
     </Box>

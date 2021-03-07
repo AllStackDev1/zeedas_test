@@ -1,5 +1,5 @@
-import { useState, useContext, createContext } from 'react'
 import PropTypes from 'prop-types'
+import { useState, useContext, createContext } from 'react'
 import { useDisclosure } from '@chakra-ui/react'
 
 import { FiHome, FiGitPullRequest, FiUsers } from 'react-icons/fi'

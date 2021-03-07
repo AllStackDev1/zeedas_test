@@ -23,7 +23,7 @@ const Chart = () => {
     position: 'right',
     labels: {
       padding: 20,
-      boxWidth: 8,
+      boxWidth: 6,
       fontSize: 13,
       usePointStyle: true,
       fontFamily: 'WorkSans',

@@ -9,7 +9,7 @@ const Total = () => {
       rounded='md'
       color='white'
       direction='column'
-      bgColor='zd-orange'
+      bgColor='zd-orange.500'
       justifyContent='space-between'
     >
       <Flex alignItems='center' justifyContent='space-between'>

@@ -58,15 +58,15 @@ const Sidebar = () => {
                 <Box
                   p={3}
                   color='white'
-                  bgColor={currentPath === i.link ? 'zd-blue' : ''}
+                  bgColor={currentPath === i.link ? 'zd-blue.500' : ''}
                   borderRadius='10px'
                 >
                   <Icon as={i.icon} boxSize={6} />
                 </Box>
                 <Text
                   ml={3}
-                  color={currentPath === i.link ? 'zd-blue' : 'white'}
-                  _hover={{ color: 'zd-blue' }}
+                  color={currentPath === i.link ? 'zd-blue.500' : 'white'}
+                  _hover={{ color: 'zd-blue.500' }}
                 >
                   {i.name}
                 </Text>
@@ -148,8 +148,8 @@ const Sidebar = () => {
             variant='outline'
             fontSize='sm'
             _hover={{
-              bgColor: 'zd-blue',
-              borderColor: 'zd-blue'
+              bgColor: 'zd-blue.500',
+              borderColor: 'zd-blue.500'
             }}
           >
             Invite to zeedas
