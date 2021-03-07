@@ -12,15 +12,15 @@ export const theme = extendTheme({
     global: () => ({
       body: {
         fontSize: 'md',
-        fontFamily: '"NunitoSans", sans-serif'
+        fontFamily: 'NunitoSans, sans-serif'
       }
     })
   },
   ...breakpoints,
   fonts: {
-    heading: '"FuturaBold" ,sans-serif',
-    display: '"NunitoSansBold" ,sans-serif',
-    light: '"WorkSans" ,sans-serif'
+    heading: 'Futura,sans-serif',
+    display: 'NunitoSansBold,sans-serif',
+    light: 'WorkSans,sans-serif'
   },
   colors: {
     zd: {
@@ -29,12 +29,12 @@ export const theme = extendTheme({
       400: 'rgba(45, 45, 45, 0.5)',
       100: '#FBFBFB'
     },
-    'zd-blue': {
-      200: '#23B3E8'
-    },
+    'zd-blue': '#23B3E8',
+    'zd-orange': '#F15832',
     'zd-border': {
-      100: 'rgba(249, 249, 249, 0.1)',
-      200: 'rgba(45, 45, 45, 0.1)'
+      50: 'rgba(16,16,16,0.2)',
+      100: 'rgba(249,249,249,0.1)',
+      200: 'rgba(45,45,45,0.1)'
     }
   }
 })

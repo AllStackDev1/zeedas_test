@@ -1,9 +1,13 @@
 import React from 'react'
 import { Box, Text } from '@chakra-ui/react'
 
-const Dashboard = () => {
+import useSetAppProps from 'hooks/useSetAppProps'
+
+const Dashboard = props => {
+  useSetAppProps(props)
+
   return (
-    <Box>
+    <Box py={{ lg: 10 }} px={{ lg: 32 }}>
       <Text>This is the dashboard</Text>
     </Box>
   )

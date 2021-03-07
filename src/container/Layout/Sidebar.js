@@ -16,8 +16,10 @@ import useApp from 'context/app'
 import { FiPlus } from 'react-icons/fi'
 import { Logo, AIllustration, BackgroundLogo } from 'assets/images'
 
-const Sidebar = props => {
-  const { menus } = useApp()
+const Sidebar = () => {
+  const { menus, appProps } = useApp()
+
+  const currentPath = appProps?.location?.pathname
 
   const myTeam = [
     { name: 'Prince Natterbase', color: '#23B3E8' },
@@ -57,15 +59,15 @@ const Sidebar = props => {
                 <Box
                   p={3}
                   color='white'
-                  bgColor={i.active ? 'zd-blue.200' : ''}
+                  bgColor={currentPath === i.link ? 'zd-blue' : ''}
                   borderRadius='10px'
                 >
                   <Icon as={i.icon} boxSize={6} />
                 </Box>
                 <Text
                   ml={3}
-                  color={i.active ? 'zd-blue.200' : 'white'}
-                  _hover={{ color: 'zd-blue.200' }}
+                  color={currentPath === i.link ? 'zd-blue' : 'white'}
+                  _hover={{ color: 'zd-blue' }}
                 >
                   {i.name}
                 </Text>
@@ -147,8 +149,8 @@ const Sidebar = props => {
             variant='outline'
             fontSize='sm'
             _hover={{
-              bgColor: 'zd-blue.200',
-              borderColor: 'zd-blue.200'
+              bgColor: 'zd-blue',
+              borderColor: 'zd-blue'
             }}
           >
             Invite to zeedas

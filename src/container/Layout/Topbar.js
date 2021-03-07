@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react'
 import {
   Flex,
@@ -17,8 +18,13 @@ import useApp from 'context/app'
 import { Hamburger, Award } from 'assets/icons'
 import DrowdownMenu from 'components/DropdownMenu'
 
-const Topbar = props => {
-  const { menus, isTopbarDropdownOpen, toggleTopbarDropdown } = useApp()
+const Topbar = () => {
+  const {
+    menus,
+    appProps,
+    isTopbarDropdownOpen,
+    toggleTopbarDropdown
+  } = useApp()
   const noticeCount = 0
 
   return (
@@ -41,11 +47,12 @@ const Topbar = props => {
         <Text
           ml={20}
           mr={10}
+          textTransform='capitalize'
           fontFamily='heading'
           fontWeight='bold'
           fontSize='26px'
         >
-          Wallet
+          {appProps?.location?.pathname?.split('/')[1]}
         </Text>
         <Box h={8} borderLeft='1px' borderLeftColor='zd-border.200' />
         <InputGroup
@@ -108,7 +115,7 @@ const Topbar = props => {
           fontWeight='800'
           alignItems='center'
           borderRadius='5px'
-          bgColor='zd-blue.200'
+          bgColor='zd-blue'
         >
           <Icon as={FiShield} boxSize={4} />
           <Text ml={2}>OWNER</Text>

@@ -50,10 +50,10 @@ const DrowdownMenu = ({ menus, isOpen }) => {
                   to={e.link || '#'}
                   onClick={e.action}
                   alignItems='center'
-                  textColor={color + '.700'}
+                  color={color + '.700'}
                   _hover={{
                     color: 'white',
-                    bgColor: 'zd-blue.200'
+                    bgColor: 'zd-blue'
                   }}
                   _focus={{
                     outline: 'none',
