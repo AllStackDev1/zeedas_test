@@ -167,7 +167,7 @@ const Topbar = () => {
             </Box>
           </Flex>
         </Flex>
-        <DrowdownMenu {...{ menus, isOpen: isTopbarDropdownOpen }} />
+        {isTopbarDropdownOpen && <DrowdownMenu {...{ menus }} />}
       </Flex>
     </Flex>
   )

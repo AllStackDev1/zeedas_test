@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { Link, Box, Fade, Text, Icon } from '@chakra-ui/react'
 import { FiLogOut } from 'react-icons/fi'
 
-const DrowdownMenu = ({ menus, isOpen }) => {
+const DrowdownMenu = ({ menus }) => {
   const drowpdownMenuItems = [
     ...menus,
     {
@@ -15,7 +15,7 @@ const DrowdownMenu = ({ menus, isOpen }) => {
   ]
 
   return (
-    <Fade initialScale={0.9} in={isOpen}>
+    <Fade initialScale={0.9} in={true}>
       <Box
         pos='absolute'
         transformOrigin='top right'
@@ -73,8 +73,7 @@ const DrowdownMenu = ({ menus, isOpen }) => {
 }
 
 DrowdownMenu.propTypes = {
-  menus: PropTypes.array.isRequired,
-  isOpen: PropTypes.bool.isRequired
+  menus: PropTypes.array.isRequired
 }
 
 export default DrowdownMenu

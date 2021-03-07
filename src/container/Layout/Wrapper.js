@@ -17,7 +17,7 @@ const Wrapper = ({ children }) => {
           w='100%'
           pt={28}
           h='100vh'
-          zIndex={0}
+          zIndex={20}
           pos='relative'
           overflowY='auto'
         >
